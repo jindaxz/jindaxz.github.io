@@ -1,0 +1,7 @@
+# For all search engines
+User-agent: *
+Disallow: /
+
+# Only for Google Search
+User-agent: Googlebot
+Disallow: /
