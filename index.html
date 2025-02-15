@@ -53,7 +53,45 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-
+            <tr onmouseout="slp_stop()" onmouseover="slp_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='slp_img'>
+                    <video width=100% height=100% muted autoplay loop>
+                      <source src="images/amg_after.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <img src='images/POME-ASR.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function slp_start() {
+                    document.getElementById('slp_img').style.opacity = "1";
+                  }
+                  function slp_stop() {
+                    document.getElementById('slp_img').style.opacity = "0";
+                  }
+                  slp_stop()
+                </script>
+              </td>
+              <td style="padding:10px;width:75%;vertical-align:middle">
+                <a href="https://doi.org/10.48550/arXiv.2411.00980">
+                  <span class="papertitle">Towards atypical speech transcription using LLM-based ASR</span>
+                </a>
+                <br>
+                
+                <strong>Jinda Zhang</strong>, 
+                <a href="#">Aanchan Mohan</a>
+            
+                <br>
+                <em>Coming Soon!</em>
+                <br>
+                <!-- <a href="https://doi.org/10.48550/arXiv.2411.00980">Paper</a> -->
+                
+                <p>We introduce a novel phoneme-oriented multi-encoder ASR architecture that integrates a dedicated phoneme encoder with a traditional acoustic encoder. </p>
+                
+              </td>
+            </tr>
           
             <tr onmouseout="slp_stop()" onmouseover="slp_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
