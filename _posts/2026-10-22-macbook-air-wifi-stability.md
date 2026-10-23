@@ -50,3 +50,5 @@ If it drops again, capturing logs before toggling Wi-Fi will help identify the c
     nmcli networking connectivity
     journalctl -b -u NetworkManager --since "15 minutes ago" --no-pager
     journalctl -k -b --since "15 minutes ago" --no-pager | grep -Ei 'wl|broadcom|wifi|wlan|deauth|timeout|firmware'
+
+For a separate issue with AnyDesk slowing down when the lid is closed, see [the display power-management fix](/blog/macbook-air-anydesk-lid-closed/).
