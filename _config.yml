@@ -1,0 +1,27 @@
+title: Jinda Zhang
+author: Jinda Zhang
+description: Research, engineering, and practical notes by Jinda Zhang.
+url: "https://jindaxz.github.io"
+baseurl: ""
+timezone: America/Vancouver
+lang: en
+markdown: kramdown
+permalink: /blog/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+feed:
+  path: blog/feed.xml
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

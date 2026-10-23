@@ -1,0 +1,25 @@
+---
+layout: blog
+title: Blog
+description: Notes on research, software, and the things I learn while building.
+---
+<header class="blog-intro">
+  <p class="eyebrow">Research &amp; practice</p>
+  <h1>Notes along the way.</h1>
+  <p>On research, software, and the things I learn while building.</p>
+</header>
+<section aria-labelledby="posts-heading">
+  <div class="section-heading"><h2 id="posts-heading">All posts</h2><a href="{{ '/blog/feed.xml' | relative_url }}">Subscribe via RSS ↗</a></div>
+  <ol class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <article class="post-preview">
+        <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>{% if post.tags.first %} <span aria-hidden="true">·</span> {{ post.tags.first | escape }}{% endif %}</p>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        <p>{{ post.description | escape }}</p>
+        <a class="read-link" href="{{ post.url | relative_url }}" aria-label="Read: {{ post.title | escape }}">Read the post <span aria-hidden="true">→</span></a>
+      </article>
+    </li>
+    {% endfor %}
+  </ol>
+</section>

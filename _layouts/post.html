@@ -1,0 +1,17 @@
+---
+layout: blog
+---
+<article class="post">
+  <a class="back-link" href="{{ '/blog/' | relative_url }}">← All posts</a>
+  <header class="post-header">
+    <p class="eyebrow">Field notes</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="post-description">{{ page.description | escape }}</p>
+    {% assign words = content | number_of_words %}
+    {% assign minutes = words | plus: 199 | divided_by: 200 %}
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time> <span aria-hidden="true">·</span> {{ site.author }} <span aria-hidden="true">·</span> {{ minutes }} min read</p>
+    {% if page.tags.size > 0 %}<ul class="tags" aria-label="Topics">{% for tag in page.tags %}<li>{{ tag | escape }}</li>{% endfor %}</ul>{% endif %}
+  </header>
+  <div class="post-content">{{ content }}</div>
+  <div class="post-end"><a href="{{ '/blog/' | relative_url }}">← Back to all posts</a><a href="{{ '/' | relative_url }}">Academic home →</a></div>
+</article>

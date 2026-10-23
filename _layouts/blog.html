@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="icon" href="{{ '/images/favicon/favicon.ico' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/stylesheet.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/blog.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body class="blog-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-name" href="{{ '/' | relative_url }}">Jinda Zhang</a>
+    <nav aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}">Academic home</a>
+      <a href="{{ '/blog/' | relative_url }}" aria-current="{% if page.layout == 'post' %}true{% else %}page{% endif %}">Blog</a>
+    </nav>
+  </header>
+  <main id="main" class="blog-main">{{ content }}</main>
+  <footer class="site-footer">
+    <span>Jinda Zhang · Notes from research and practice.</span>
+    <a href="{{ '/blog/feed.xml' | relative_url }}">RSS feed</a>
+  </footer>
+</body>
+</html>
